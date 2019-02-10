@@ -73,6 +73,14 @@
               $('[data-toggle="tooltip"]').tooltip(); 
             });
     </script>
+    <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover(); 
+            });
+            $(function () {
+            $('[data-toggle="popover"]').popover()
+            })
+    </script>   
 </head>
 
 <body>
@@ -93,7 +101,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -206,7 +214,7 @@
                                 <div class="pull-right">
                                     <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                         data-container="body">
-                                        <i class="glyphicon glyphicon-filter"></i>
+                                        <i class="fa fa-filter"></i>
                                     </span>
                                 </div>
                             </div>
@@ -322,7 +330,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -400,7 +408,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -587,7 +595,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -754,7 +762,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -890,7 +898,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -1114,7 +1122,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -1174,12 +1182,12 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="badge badge-secondary">
-                                <h3>.pagination</h3>
+                                <h3>Pagination</h3>
                             </div>
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -1257,7 +1265,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -1398,7 +1406,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -1636,7 +1644,7 @@
                                 <div class="pull-right">
                                     <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                         data-container="body">
-                                        <i class="glyphicon glyphicon-filter"></i>
+                                        <i class="fa fa-filter"></i>
                                     </span>
                                 </div>
                             </div>
@@ -1756,7 +1764,7 @@
                                 <div class="pull-right">
                                     <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                         data-container="body">
-                                        <i class="glyphicon glyphicon-filter"></i>
+                                        <i class="fa fa-filter"></i>
                                     </span>
                                 </div>
                             </div>
@@ -1915,7 +1923,7 @@
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -2072,7 +2080,7 @@
                                 <div class="pull-right">
                                     <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                         data-container="body">
-                                        <i class="glyphicon glyphicon-filter"></i>
+                                        <i class="fa fa-filter"></i>
                                     </span>
                                 </div>
                             </div>
@@ -2112,11 +2120,11 @@
                                                     </p>
                                                 </div>
                                             </div></br>
-                                            Mặc định, box nhỏ sẽ xuất hiện bên dưới, muốn xuất hiện bên trên, ta dùng thuộc tính <code>data-placement="top"</code> tương tự là <code>left, right, bottom</code></br>
+                                            Mặc định, box nhỏ sẽ xuất hiện bên trên, muốn xuất hiện bên trên, ta dùng thuộc tính <code>data-placement="top"</code> tương tự là <code>left, right, bottom</code></br>
                                             <div class="mt-4">
-                                                <a href="#" data-toggle="tooltip"  title="Hooray!">Hover over me</a>
+                                                <a href="#" data-placement="left" data-toggle="tooltip"  title="Hooray!">Hover over me</a>
                                             <a href="#" data-toggle="tooltip" class="btn btn-success" title="Hooray!">Hover over me</a>
-                                            <button class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Noooo !!">Hover over me</button>
+                                            <button class="btn btn-info" data-toggle="tooltip" data-placement="right" title="Noooo !!">Hover over me</button>
                                             </div>
                                         </td>
                                         <td>...</td>
@@ -2125,16 +2133,89 @@
                             </table>
                         </div>
                     <!--Tooltip : End-->
-                    <!--Glyphicon : Start-->
+                    <!--Popover : Start-->
+                    <div class="panel panel-primary mb-5">
+                            <div class="panel-heading">
+                                <div class="badge badge-secondary">
+                                    <h3>Popover</h3>
+                                </div>
+                                <div class="pull-right">
+                                    <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
+                                        data-container="body">
+                                        <i class="fa fa-filter"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                                    data-filters="#local-table" placeholder="Filter Developers" />
+                            </div>
+                            <table class="table table-hover table-bordered table-condensed" id="local-table">
+                                <thead>
+                                    <tr>
+                                        <th width="3%">#</th>
+                                        <th width="30%">Class</th>
+                                        <th width="60%">Description</th>
+                                        <th width="7%">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+    
+                                    <tr>
+                                        <td>1</td>
+                                        <td><strong>.popover</strong></td>
+                                        <td>
+                                            Popover cũng tương tự Tooltip. Điểm khác biệt giữa chúng là Popover có thể hiển thị nhiều thông tin hơn.</br>
+                                            Để khởi tạo Popover, thêm <code>data-toggle="popover"</code> lên phần tử chỉ định ( thẻ &#60;a&#62; hoặc button...) </br>
+                                            Sử dụng thuộc tính <code>title</code> để chỉ định tiêu đề của Popover và <code>data-content="This is Popover"</code> để hiển thị nội dung.</br>
+                                            Chú ý: Popover cần được kích hoạt với JQuery: chọn phần tử chỉ định và gọi phương thức popover().</br>
+                                            <div class="jumbotron mt-4 pt-2">
+                                                <h1 class="display-6 ">Mã JQuery cho Popover</h1>
+                                                <div class="container bg-dark mt-3 pt-3">
+                                                    <p class="lead text-white pb-3">
+                                                            &#60;script&#62;</br>
+                                                                    $(document).ready(function(){
+                                                                      $('[data-toggle="popover"]').popover(); 
+                                                                    });
+                                                                </br>
+                                                            &#60;/script&#62;</br>
+                                                    </p>
+                                                </div>
+                                            </div></br>
+                                            Mặc định, popover sẽ xuất hiện bên phải phần tử, muốn xuất hiện bên trên, ta dùng thuộc tính <code>data-placement="top"</code> tương tự là <code>left, right, bottom</code>.</br>
+                                            Sử dụng <code>data-trigger="focus"</code> để khi click vào phần tử khác thì Popover sẽ biến mất hoặc <code>data-trigger="hover"</code> rê chuột vào thì Popover sẽ hiện lên.</br>
+                                            <div class="mt-4">
+                                                <div class="container-fuild">
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                             <a class="mr-5" href="#" data-toggle="popover" data-trigger="hover" title="This is Title !!" data-content="Sử dụng data-trigger = hover">Hover over me</a>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <button class="btn btn-info ml-3" data-toggle="popover" data-placement="top" title="Noooo !!" data-content="Không sử dụng data-trigger = focus" >Click over me</button>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <button class="btn btn-info ml-3" data-toggle="popover" data-placement="top" title="Noooo !!" data-content="Sử dụng data-trigger = focus" data-trigger="focus">Click over me</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    <!--Popover : End-->
+                    <!--Popup Modal : Start-->
                     <div class="panel panel-primary mb-5">
                         <div class="panel-heading">
                             <div class="badge badge-secondary">
-                                <h3>Sử dụng Glyphicon</h3>
+                                <h3>Popup Modal</h3>
                             </div>
                             <div class="pull-right">
                                 <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                                     data-container="body">
-                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <i class="fa fa-filter"></i>
                                 </span>
                             </div>
                         </div>
@@ -2155,8 +2236,196 @@
 
                                 <tr>
                                     <td>1</td>
-                                    <td><strong>glyphicon glyphicon-star</strong></td>
-                                    <td><span class="glyphicon glyphicon-star"></span></td>
+                                    <td><strong>.modal</strong></td>
+                                    <td>
+                                        Modal là 1 hộp pop-up xuất hiện khi ta click vào 1 button hoặc 1 link.</br>
+                                        Để tạo modal, ta cần thẻ &#60;button&#62; : với thuộc tính <code>data-toggle="modal"</code> để kích hoạt chế độ modal và thuộc tính <code>data-target="#myModal"</code> trỏ tới ID của &#60;div&#62; chứa nội dung bên trong Modal.</br>
+                                        Thẻ &#60;div&#62; chứa nội dung của Modal cần có <b>.modal</b>, <b>.fade</b> (effect) và <code>id="myModal"</code> cái mà để cho <code>data-target="#myModal"</code> trỏ tới.<br>
+                                        Note: nếu 1 page có nhiều Modal, ID phải là duy nhất ứng với từng Modal.</br>
+                                        Bên trong <b>div.modal</b>, ta có <b>.modal-dialog</b> để auto tạo độ rộng cho Modal, nếu không có <b>.modal-dialog</b>, mặc định Pop-up sẽ trải dài full màn hình.<br>
+                                        Bên trong <b>.modal-dialog</b>, ta có <b>.modal-content</b> để xác định nội dung của Modal.<br>
+                                        Bên trong <b>.modal-content</b>, ta có <b>.modal-header</b> ứng với tiêu đề Pop-up, <b>.modal-body</b> ứng với nội dung của Pop-up và <b>.modal-footer</b> ứng với nội dung cuối của Pop-up.</br>
+                                        Bên trong <b>.modal-header</b>, dùng <b>.modal-title</b> để đặt tiêu đề cho Pop-up.</br>
+                                        <button class="btn btn-info  mt-3" data-toggle="modal" data-target="#myModal">
+                                            Click My Modal
+                                        </button>
+                                        <!--Tạo Modal-->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4>Đây là nd bên trong .model-header</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Đây là nd bên trong .model-body
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        Đây là nd bên trong .model-footer
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><strong>Tạo dấu Close cho Modal</strong></td>
+                                    <td>
+                                        Để tạo nút Close góc trên bên phải Pop-up, bên trong <b>.modal-header</b> ta dùng &#60;button&#62; với <b>.close</b> để tạo hình cho nút Close thêm đẹp và thuộc tính <code> data-dismiss="modal"</code> để kích hoạt đóng Pop-up.</br>
+                                        Tạo dấu <code>&times;</code> nằm trong thẻ &#60;button&#62;</br>
+                                        <button class="btn btn-info  mt-3" data-toggle="modal" data-target="#myModal1">
+                                            Click My Modal
+                                        </button>
+                                        <!--Tạo Modal-->
+                                        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Đây là nd bên trong .model-header</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Đây là nd bên trong .model-body
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        Đây là nd bên trong .model-footer
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><strong>Tạo nút Close cho Modal</strong></td>
+                                    <td>
+                                        Tương tự như dấu Close ở trên, muốn tạo nút Close cho Modal ở phần <b>.modal-footer</b>, ta cũng tạo ra 1 &#60;button&#62; và mấu chốt là cần phải có thuộc tính <code>data-dismiss="modal"</code> để kích hoạt đóng Pop-up.</br>
+                                        <button class="btn btn-info  mt-3" data-toggle="modal" data-target="#myModal2">
+                                            Click My Modal
+                                        </button>
+                                        <!--Tạo Modal-->
+                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel1">Đây là nd bên trong .model-header</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Đây là nd bên trong .model-body
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><strong>Tùy chỉnh kích cỡ cho Modal</strong></td>
+                                    <td>
+                                        Dùng 2 class <b>.modal-lg</b> và <b>.modal-sm</b> nằm cùng với class <b>.modal-dialog</b> để tùy chỉnh kích cỡ cho Modal</br>
+                                        <button class="btn btn-info  mt-3" data-toggle="modal" data-target="#myModal3">
+                                            Click My Small Modal
+                                        </button>
+                                        <button class="btn btn-info  mt-3" data-toggle="modal" data-target="#myModal4">
+                                            Click My Large Modal
+                                        </button>
+                                        <!--Tạo Modal-->
+                                        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog"  aria-hidden="true">
+                                            <div class="modal-dialog modal-sm" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Đây là nd bên trong .model-header</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Đây là nd bên trong .model-body
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Tạo Modal-->
+                                        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog"  aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Đây là nd bên trong .model-header</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Đây là nd bên trong .model-body
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><strong>Đưa form vào trong Modal</strong></td>
+                                    <td>
+                                        Dùng 2 class <b>.modal-lg</b> và <b>.modal-sm</b> nằm cùng với class <b>.modal-dialog</b> để tùy chỉnh kích cỡ cho Modal</br>
+                                        <button class="btn btn-info  mt-3" data-toggle="modal" data-target="#myModal5">
+                                            Click My Form's Modal
+                                        </button>
+                                        <!--Tạo Modal-->
+                                        <div class="modal fade" id="myModal5" tabindex="-1" role="dialog"  aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Thông tin</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                            <form action="" method="POST" name="login1">
+                                                                    <div class="form-group">
+                                                                        <label for="nhan">Tài khoản</label>
+                                                                        <input type="text" class="form-control" placeholder="Tên tài khoản">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="nhan">Đổi mật khẩu</label>
+                                                                        <input type="password" autocomplete="off" class="form-control"
+                                                                            placeholder="Mật khẩu">
+                                                                    </div>
+                                                                </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td>...</td>
                                 </tr>
 
@@ -2164,7 +2433,332 @@
                             </tbody>
                         </table>
                     </div>
-                    <!--Glyphicon : End-->
+                    <!--Popup Modal : End-->
+                    <!--Table : Start-->
+                    <div class="panel panel-primary mb-5">
+                        <div class="panel-heading">
+                            <div class="badge badge-secondary">
+                                <h3>Table</h3>
+                            </div>
+                            <div class="pull-right">
+                                <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
+                                    data-container="body">
+                                    <i class="fa fa-filter"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                                data-filters="#local-table" placeholder="Filter Developers" />
+                        </div>
+                        <table class="table table-hover table-bordered table-condensed" id="local-table">
+                            <thead>
+                                <tr>
+                                    <th width="3%">#</th>
+                                    <th width="30%">Class</th>
+                                    <th width="60%">Description</th>
+                                    <th width="7%">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td><strong>.table</strong></td>
+                                    <td>
+                                        Dùng để khởi tạo bảng </br>
+                                        <table class="table mt-3">
+                                            <thead>
+                                              <tr>
+                                                <th>Firstname</th>
+                                                <th>Lastname</th>
+                                                <th>Email</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>John</td>
+                                                <td>Doe</td>
+                                                <td>john@example.com</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Mary</td>
+                                                <td>Moe</td>
+                                                <td>mary@example.com</td>
+                                              </tr>
+                                              <tr>
+                                                <td>July</td>
+                                                <td>Dooley</td>
+                                                <td>july@example.com</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><strong>.table-striped, .table-bordered</strong></td>
+                                    <td> 
+                                        <code>.table-striped</code> : Dùng để tạo hiệu ứng sọc xám trắng xen kẻ cho bảng. <br>
+                                        <code>.table-bordered</code> : Dùng để tạo khung và viền cho bảng và các ô. <br>
+                                        <table class="table table-striped table-bordered mt-3">
+                                            <thead>
+                                              <tr>
+                                                <th>Firstname</th>
+                                                <th>Lastname</th>
+                                                <th>Email</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>John</td>
+                                                <td>Doe</td>
+                                                <td>john@example.com</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Mary</td>
+                                                <td>Moe</td>
+                                                <td>mary@example.com</td>
+                                              </tr>
+                                              <tr>
+                                                <td>July</td>
+                                                <td>Dooley</td>
+                                                <td>july@example.com</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><strong>.table-hover</strong></td>
+                                    <td>
+                                            Khi rê chuột lên các dòng của bảng sẽ có hiệu ứng (dòng chuyển màu xám). <br>
+                                            <table class="table table-striped table-hover mt-3">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Firstname</th>
+                                                    <th>Lastname</th>
+                                                    <th>Email</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>John</td>
+                                                    <td>Doe</td>
+                                                    <td>john@example.com</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Mary</td>
+                                                    <td>Moe</td>
+                                                    <td>mary@example.com</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><strong>Contextual Classes</strong></td>
+                                    <td>
+                                            Contextual classes can be used to color the whole table (<table>),  the table rows (&#60;tr&#62;) or table cells (&#60;td&#62;).<br>
+                                            <table class="table table-striped table-bordered mt-3">
+                                                    <thead>
+                                                    <tr>
+                                                      <th>Class</th>
+                                                      <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-primary</code></td>
+                                                      <td class="table-primar">Blue: Indicates an important action</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-success</code></td>
+                                                      <td class="table-success">Green: Indicates a successful or positive action</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-danger</code></td>
+                                                      <td class="table-danger">Red: Indicates a dangerous or potentially negative action</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-info</code></td>
+                                                      <td class="table-info">Light blue: Indicates a neutral informative change or action</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-warning</code></td>
+                                                      <td class="table-warning">Orange: Indicates a warning that might need attention</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-active</code></td>
+                                                      <td class="table-active">Grey: Applies the hover color to the table row or table cell</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-secondary</code></td>
+                                                      <td class="table-secondary">Grey: Indicates a slightly less important action</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-light</code></td>
+                                                      <td class="table-light">Light grey table or table row background</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><code class="w3-codespan">.table-dark</code></td>
+                                                      <td class="table-dark">Dark grey table or table row background</td>
+                                                    </tr>
+                                                    </tbody>
+                                            </table>
+                                                    
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><strong>Caption</strong></td>
+                                    <td>
+                                            <code>&#60;caption&#62;</code> giống như tiêu đề của bảng. Nó giúp cho người đọc dễ tìm kiếm trên màn hình và hiểu về nó hơn trước khi quyết định đọc nó. <br>
+                                            <table class="table mt-3">
+                                                    <caption>List of users</caption>
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">First</th>
+                                                        <th scope="col">Last</th>
+                                                        <th scope="col">Handle</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Larry</td>
+                                                        <td>the Bird</td>
+                                                        <td>@twitter</td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                           
+                                                    
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Table : End-->
+                    <!--Font Awesome : Start-->
+                    <div class="panel panel-primary mb-5">
+                        <div class="panel-heading">
+                            <div class="badge badge-secondary">
+                                <h3>Icon</h3>
+                            </div>
+                            <div class="pull-right">
+                                <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
+                                    data-container="body">
+                                    <i class="fa fa-filter"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                                data-filters="#local-table" placeholder="Filter Developers" />
+                        </div>
+                        <table class="table table-hover table-bordered table-condensed" id="local-table">
+                            <thead>
+                                <tr>
+                                    <th width="3%">#</th>
+                                    <th width="30%">Class</th>
+                                    <th width="60%">Description</th>
+                                    <th width="7%">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td><strong>fa fa-star</strong></td>
+                                    <td><span class="fa fa-star"></span></td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><strong>fa fa-user-circle</strong></td>
+                                    <td><span class="fa fa-user-circle"></span></td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><strong>fa fa-github</strong></td>
+                                    <td><span class="fa fa-github"></span></td>
+                                    <td>...</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Font Awesome : End-->
+                    <!--Advanced : Start-->
+                    <div class="panel panel-primary mb-5">
+                        <div class="panel-heading">
+                            <div class="badge badge-secondary">
+                                <h3>Advanced</h3>
+                            </div>
+                            <div class="pull-right">
+                                <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
+                                    data-container="body">
+                                    <i class="fa fa-filter"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                                data-filters="#local-table" placeholder="Filter Developers" />
+                        </div>
+                        <table class="table table-hover table-bordered table-condensed" id="local-table">
+                            <thead>
+                                <tr>
+                                    <th width="3%">#</th>
+                                    <th width="30%">Class</th>
+                                    <th width="60%">Description</th>
+                                    <th width="7%">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td><strong>Advanced</strong></td>
+                                    <td>Ngoài ra, trong Boostrap 4 còn nhiều phần nâng cao như : <a target="_blank" href="https://www.w3schools.com/bootstrap4/bootstrap_scrollspy.asp" class="text-dark">Scrollspy</a>, <a target="_blank" href="https://www.w3schools.com/bootstrap4/bootstrap_filters.asp" class="text-dark">Filters</a> </td>
+                                    <td>...</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Advanced : End-->
                 </div>
             </div>
         </div>
