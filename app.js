@@ -8,11 +8,6 @@ var passport = require('passport');
 var session = require('express-session');
 var flash = require('connect-flash');
 var mongoose = require('mongoose');
-// var crypto = require('crypto');
-// password = crypto.pbkdf2Sync("123", "6ab9ff994809e4aee87fdbd76ac47c64", 10000, 512, 'sha512').toString('hex');
-// const buf = crypto.randomBytes(16);
-// console.log(
-//   `${password.length} bytes of random data: ${password.toString('hex')}`);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -36,7 +31,7 @@ app.use(session({
   resave : false,
   saveUninitialized : false,
   cookie : {
-      maxAge : 1000*60*5
+      maxAge : 1000*60*30
   }
 }))
 app.use(passport.initialize());
