@@ -1,51 +1,66 @@
 const express = require('express');
 const passport = require('passport');
 const crypto = require('crypto');
+
 const Users = require('../models/user');
+const Authen = require('../common/isLogged');
+
 const router = express.Router();
+
 router.get('/login',function(req,res){
-    res.render('login');
+    if(req.isAuthenticated()){
+        res.redirect('/');
+    }else{
+            res.render('login',{
+                message: req.flash('loginMessage')
+            });
+    }
+   
 })
 router.post('/login',passport.authenticate('local',{
-    successRedirect: '/auth/loginOk',
-    failureRedirect: '/auth/login',
+    successRedirect: '/',
+    failureRedirect: '/users/login',
     failureFlash: true
 }))
 router.get('/loginOk', function(req,res){
     res.send('Page Local');
 })
-router.get('/create', function(req,res){
-    res.render('create-account');
+router.get('/create', Authen.isLoggedIn, function(req,res){
+    res.render('create-account',{
+        body : res.query,
+        success_message: req.query.success_message,
+        error_message: req.query.error_message,
+    });
 })
-router.post('/register', function(req,res){
+router.post('/register',  Authen.isLoggedIn, function(req,res){
   var name = req.body.name;
   var pw = req.body.password;
   var salt = crypto.randomBytes(16).toString('hex');
   pw = crypto.pbkdf2Sync(pw, salt, 10000, 512, 'sha512').toString('hex');
 
   // C1 : Thêm user vào trong mlab
-  var user = new Users.user({
+  var newUser = new Users.user({
       user : name,
       salt : salt,
       password : pw,
   })
-  Users.findByOne({user : user.user},function(err,data){
+  Users.findByOne({user : newUser.user},function(err,data){
       if(err){
-        res.redirect('/users/create?'+'error');
+        res.redirect('/users/create?error_message='+'error');
           return;
       }
-      if(data.length != 0){
-        res.redirect('/users/create?'+'tài khoản đã tồn tại');
+      if(data != null){
+        res.redirect('/users/create?error_message='+'Tài khoản đã tồn tại');
         return;
       }else{
-            user.save(function(err){
+                newUser.save(function(err){
                 if(err){
-                res.redirect('/users/create?'+'Create account failed');
+                res.redirect('/users/create?error_message='+'Create account failed');
                 return;
                 }
             });
       }
-      res.redirect('/?'+'Create account success');
+      res.redirect('/users/create?success_message='+'Create account success');
   })
  
   // C2 : Thêm user vào trong mlab

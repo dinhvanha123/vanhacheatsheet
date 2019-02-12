@@ -1,5 +1,5 @@
 var LocalStrategy = require('passport-local').Strategy;
-var user = require('../routes/users');
+var Users = require('../models/user');
 var crypto = require('crypto');
 function configPassport(passport){
     passport.serializeUser((user, done) => {
@@ -13,7 +13,7 @@ function configPassport(passport){
         passwordField: 'password',
         passReqToCallback : true // allows us to pass back the entire request to the callback
     }, function(req,username,password,done){
-        user.findByOnes({user : username},function(err,user){
+        Users.findByOne({user : username},function(err,user){
             if(err){
                 return  done(err);
             }

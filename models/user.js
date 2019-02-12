@@ -57,7 +57,7 @@ var findByOne = function(query,callback){
             callback('db == null', null);
             return;
         }
-        db.model('user',UserSchema).find(query).exec(function(err,data){
+        db.model('user',UserSchema).findOne(query).exec(function(err,data){
             callback(err,data);
         })
     })
