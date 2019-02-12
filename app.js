@@ -21,7 +21,7 @@ var bootstrapRouter = require('./routes/bootstrap');
 
 var app = express();
 // Kết nối MongoDB
-mongoose.connect("mongodb://dinhvanha123:dinhvanha123@ds163014.mlab.com:63014/passauthen",function(){
+mongoose.connect("mongodb://dinhvanha123:dinhvanha123@ds163014.mlab.com:63014/passauthen",{ useNewUrlParser: true},function(){
   console.log('Connect MongoDb success');
 })
 

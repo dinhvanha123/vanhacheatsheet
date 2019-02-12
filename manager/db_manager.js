@@ -14,12 +14,12 @@ var DBManagerInstance = (function(){
         _Mongo_List = [];
     }
     DBManager.prototype.getMongoDb = function(zid,callback){
-        if(_Mongo_List[zid] == null){
+        if(User_MongoDb[zid] == null){
             callback('[zid=' + zid + '] [error= database config error, database not existing]');
             return;
         }
         if(_Mongo_List[zid]){
-            callback(null, _MongoDbList[zid]);
+            callback(null, _Mongo_List[zid]);
         }else {
             mongoose.createConnection(User_MongoDb[zid].url , {useNewUrlParser: true},function(err,db){
               if(err){
