@@ -140,17 +140,36 @@ td.subtopic {
                                     <tr>
                                         <td>7</td>
                                         <td><strong>git log</strong></td>
-                                        <td>Xem log các commit trong Repository (tham khảo thêm các param)</td>
+                                        <td>Hiển thị lịch sử tất cả các Commit trên nhánh hiện tại  đang làm việc ( con trỏ HEAD đang trỏ tới)</td>
                                         <td>...</td>
                                     </tr>
     
                                     <tr>
-                                            <td>7'</td>
+                                            <td>7.1</td>
                                             <td><strong>git log --oneline</strong></td>
-                                            <td>Xem log các commit một cách ngắn ngọn</td>
+                                            <td>Xem log các Commit một cách ngắn ngọn</td>
+                                            <td>...</td>
+                                     </tr>
+                                    <tr>
+                                            <td>7.2</td>
+                                            <td><strong>git log --graph</strong></td>
+                                            <td>Xem log các Commit kèm theo 1 đồ thị đại diện cho lịch sử Commit. </td>
                                             <td>...</td>
                                         </tr>
-
+                                    <tr>
+                                    <tr>
+                                            <td>7.3</td>
+                                            <td><strong>git log --reflog</strong></td>
+                                            <td>Hiển thị những lần Commit theo thứ tự của tất cả các Reference ( Tag, Branch, Remote...) </td>
+                                            <td>...</td>
+                                        </tr>
+                                    <tr>
+                                    <tr>
+                                            <td>7.3</td>
+                                            <td><strong>git log --all</strong></td>
+                                            <td>Hiển thị lịch sử Commit của tất cả các nhánh ( branch ) </td>
+                                            <td>...</td>
+                                        </tr>
                                     <tr>
                                         <td>8</td>
                                         <td><strong>git reset HEAD</strong> <i>filename</i></td>
@@ -190,6 +209,15 @@ td.subtopic {
                                         <td>13</td>
                                         <td><strong>git commit --amend</strong> </td>
                                         <td>Nhập 1 commit về commit trước đó</td>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td><strong>git reflog</strong> </td>
+                                        <td>Là 1 tập tin hiển thị tất cả các <code>Commit</code> cũng như Lịch sử hoạt động trong Repo của chúng ta. Vd: mỗi lần ta <code>checkout</code> qua nhánh khác, ta <code>Commit</code>, ta <code>Rebase</code> sẽ đều được ghi lại bởi reflog.</br>
+                                                Chính vì vậy, git reflog thường sẽ là bước cuối cùng để khắc phục lỗi như là <code>Commit</code> nhầm, Xóa nhầm <code>Branch</code>, <code>Commit</code> nhầm nhánh. </br>
+                                                Lúc này ta sẽ dựa vào ID của mỗi <code>Commit</code> mà khôi phục lại <code>File</code>, <code>Branch</code>...
+                                        </td>
                                         <td>...</td>
                                     </tr>
                                 </tbody>
@@ -508,6 +536,22 @@ td.subtopic {
                                         <td>22</td>
                                         <td><strong>git push name -d tagname</strong></td>
                                         <td>Xóa <strong>tagname</strong> tại Remote repository có tên <strong>name</strong></td>
+                                        <td>...</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>23</td>
+                                        <td><strong>git merge tagname</strong></td>
+                                        <td>
+                                            Merge <code>tagname</code> với  nhánh hiện tại.</br>
+                                            Trước khi merge, ta cần làm thao tác <code>git fetch --tags origin</code> để cập nhập <code>tagname</code></br>
+                                            <u>Example</u>:  </br>
+                                            <code>
+                                                git checkout destination_branch</br>
+                                                git fetch --tags origin</br>
+                                                git merge tag_name</br>
+                                            </code>
+                                        </td>
                                         <td>...</td>
                                     </tr>
                                     <!-- TAG : END -->
