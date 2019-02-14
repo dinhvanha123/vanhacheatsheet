@@ -96,6 +96,17 @@ td.subtopic {
                                 <tbody>
     
                                     <tr>
+                                        <td>0</td>
+                                        <td><strong>Các cấp độ cấu hình trong GIT</strong></td>
+                                        <td>
+                                            C:\ProgramData\Git\config : Cấu hình chung cho toàn bộ người dùng.<br>
+                                            C:\Users\Van Ha\.gitconfig : Cấu hình cho người dùng.<br>
+
+
+                                        </td>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
                                         <td>1</td>
                                         <td><strong>git init</strong></td>
                                         <td>Khởi tạo một Local Repository</td>
@@ -173,7 +184,39 @@ td.subtopic {
                                     <tr>
                                         <td>8</td>
                                         <td><strong>git reset HEAD</strong> <i>filename</i></td>
-                                        <td>Xóa <strong>fileName</strong> ra khỏi trạng thái Staged (file vẫn còn tồn tại)</td>
+                                        <td>Xóa <strong>fileName</strong> ra khỏi trạng thái Staged (file vẫn còn tồn tại )</td>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.1</td>
+                                        <td><strong>git reset commitID</strong></td>
+                                        <td>
+                                                Đưa Local Repo quay về trạng thái lúc <code>CommitID</code><br>
+                                                Xóa tất cả các commit trước đó.<br>
+                                                <b>Xóa</b> luôn những thay đổi trong khu vực <code>Stage Area</code><br>
+                                                Nhưng <b>giữ</b> lại những thay đổi trong khu vực <code>Working Tree</code><br>
+                                        </td>
+                                    <tr>
+                                        <td>8.2</td>
+                                        <td><strong>git reset --soft commitID</strong></td>
+                                        <td>
+                                                Đưa Local Repo quay về trạng thái lúc <code>CommitID</code><br>
+                                                Xóa tất cả các commit trước đó.<br>
+                                                <b>Giữ</b> lại những thay đổi trong khu vực <code>Stage Area</code><br>
+                                                <b>Giữ</b> lại những thay đổi trong khu vực <code>Working Tree</code><br>
+                                        </td>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.2</td>
+                                        <td><strong>git reset --hard commitID</strong></td>
+                                        <td>
+                                                Đưa Local Repo quay về trạng thái lúc <code>CommitID</code><br>
+                                                Xóa tất cả các commit trước đó.<br>
+                                                <b>Xóa</b> luôn những thay đổi trong khu vực <code>Stage Area</code><br>
+                                                <b>Xóa</b> luôn những thay đổi trong khu vực <code>Working Tree</code><br>
+                                                Sử dụng <code>git reset --hard ORIG_HEAD</code> để phục hồi lại như lúc đầu. <br>
+                                        </td>
                                         <td>...</td>
                                     </tr>
     
@@ -194,7 +237,10 @@ td.subtopic {
                                     <tr>
                                         <td>11</td>
                                         <td><strong>git checkout </strong> <i>-- filename</i></td>
-                                        <td>Quay về trạng thái trước của tập tin <strong>filename</strong></td>
+                                        <td>
+                                            Quay về trạng thái trước của tập tin <strong>filename</strong><br>
+                                            Ta cũng có thể dùng " <code>git checkout tagname | commitID</code> " để quay về ngay tại thời điểm của tagname hoặc của commitID đó.<br>
+                                        </td>
                                         <td>...</td>
                                     </tr>
     
@@ -646,47 +692,85 @@ td.subtopic {
                                     <tr>
                                         <td colspan="4" class="subtopic">COMPARISONS</td>
                                     </tr>
-    
+                                    
+                                    <tr>
+                                        <td>0</td>
+                                        <td><strong>Tổng quan</strong></td>
+                                        <td>
+                                            <div class="mb-4">
+                                                    <h4 class="text-info ">Dòng chảy của GIT ( Git workflow )</h4>
+                                                    <a href="https://backlog.com/git-tutorial/git-workflow/" target="_blank" class=" text-dark">Xem chi tiết</a>
+                                            </div>
+                                            <img src="../images/git/git-transport.png" alt="">
+                                            <div class="mt-5">
+                                                    <h4 class="text-info ">3 trạng thái của File trong GIT</h4>
+                                                    <a href="https://backlog.com/git-tutorial/git-workflow/" target="_blank" class=" text-dark">Xem chi tiết</a>
+                                            </div>
+                                            <img src="../images/git/git_workflow_002.png" alt="">
+                                        </td>
+                                        <td>...</td>
+                                    </tr>
+
                                     <tr>
                                         <td>1</td>
                                         <td><strong>git diff <br>git difftool</strong></td>
                                         <td>
-                                            Staging vs Working (L-R)<br>
+                                            So sánh Staging vs Working.<br>
                                             Dùng <code>git difftool</code> để gọi lên tool so sánh sự khác nhau giữa 2 tập tin hoặc 1 tập tin nhưng đã được edit vào 2 thời điểm khác nhau.<br>
                                             Trong Git mặc định sử dụng vimdiff. Ta cũng có thể cài P4Merge để thay thế vimdiff.<br>
-                                            Nhấp <a target="_blank" href="https://www.perforce.com/downloads/visual-merge-tool">vào đây</a>  để cài đặt P4Merge và <a href="https://gist.github.com/dgoguerra/8258007">vào đây</a> để cấu hình P4Merge.<br>
+                                            Nhấp <a target="_blank" href="https://www.perforce.com/downloads/visual-merge-tool">vào đây</a>  để cài đặt P4Merge và <a target="_blank" href="https://gist.github.com/dgoguerra/8258007">vào đây</a> để cấu hình P4Merge.<br>
+                                            Staging bên trái và Working bên phải. <br>
                                             
                                         </td>
                                         <td>...</td>
                                     </tr>
+                                   
                                     <tr>
                                         <td>2</td>
-                                        <td><strong>git diff HEAD</td>
-                                        <td>Local Repo vs Working (L-R)</td>
+                                        <td><strong>git diff HEAD</br>git difftool HEAD</strong></td>
+                                        <td>So sánh Local Repo vs Working<br>
+                                                Nhớ cài đặt P4Merge.<br>
+                                                Local Repo bên trái và Working bên phải.<br>
+                                        </td>
                                         <td>...</td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td><strong>git diff --staged HEAD<br>git diff –cached</strong></td>
-                                        <td>Local Repo vs Staging Area (L-R)</td>
+                                        <td><strong>git diff --staged HEAD<br>git diff --cached<br>git difftool --staged HEAD</strong></td>
+                                        <td>So sánh Local Repo vs Staging Area.<br>
+                                            Nhớ cài đặt P4Merge.<br>
+                                            Local Repo bên trái và Staging Area bên phải.<br>
+                                        </td>
                                         <td>...</td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td><strong>git diff master origin/master</strong></td>
-                                        <td>Local Repo vs Remote Repo (L-R)</td>
+                                        <td><strong>git difftool master origin/master</strong></td>
+                                        <td>So sánh Local Repo vs Remote Repo (L-R).<br>
+                                                Nhớ cài đặt P4Merge.<br>
+                                                Local Repo bên trái và Remote Repo bên phải.<br>
+                                                Nếu viết câu lệnh <code>git diff Remote_repo Local_repo</code> thì vị trí hiển thị sẽ đảo lại.<br>
+                                        </td>
                                         <td>...</td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <td><strong>git diff comitID commitID</strong></td>
-                                        <td>Comit vs Commit</td>
+                                        <td><strong>git difftool commitID_1 commitID_2</strong></td>
+                                        <td>So sánh sự khác nhau của tất cả các file trong <code>commitID_1</code> với <code>commitID_2</code>.<br>
+                                                Nhớ cài đặt P4Merge.<br>
+                                                <code>CommitID_1</code> nằm bên trái, <code>CommitID_2</code> nằm bên phải.<br>
+                                        </td>
                                         <td>...</td>
                                     </tr>
                                     <tr>
                                         <td>6</td>
-                                        <td><strong>git diff tagname vs tagname</strong></td>
-                                        <td>Tag vs Tag</td>
+                                        <td><strong>git difftool Tag_name1 vs Tag_name2</strong></td>
+                                        <td>
+                                            So sánh sự khác nhau của tất cả các file trong <code>Tag_name1</code> với <code>Tag_name2</code>. <br>
+                                            Nhớ cài đặt P4Merge.<br>
+                                            <code>Tag_name1</code> nằm bên trái, <code>Tag_name2</code> nằm bên phải.<br>
+                                        </td>
+
                                         <td>...</td>
                                     </tr>
                                     <!-- COMPARISONS : END -->
@@ -699,7 +783,7 @@ td.subtopic {
                                     <tr>
                                         <td>1</td>
                                         <td><strong>git stash </strong></td>
-                                        <td>Lưu toàn bộ nội dung công việc đang làm dở </td>
+                                        <td>Lưu toàn bộ nội dung công việc đang làm dở, chuyển sang nhánh khác để làm gấp 1 công việc nào đó. </td>
                                         <td>...</td>
                                     </tr>
     
@@ -725,6 +809,47 @@ td.subtopic {
                                     </tr>
                                     <!-- STASH : END -->
                                     
+                                    <!-- CONFLICT REBASE : START -->
+                                    <tr>
+                                            <td colspan="4" class="subtopic">Xử lý Conflict bằng Rebase</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>1</td>
+                                            <td><strong>git rebase master </strong></td>
+                                            <td>Giã sử có xung đột xảy ra như là 2 người cùng chỉnh sửa 1 dòng code trong cùng 1 file.<br>
+                                                    Lúc này GIT sẽ thông báo cho ta biết có xung đột xảy ra. Và ta có thể xử lý xung đột bằng cách mở file đó lên và sửa những dòng có xung đột.<br>
+                                                    Những câu lệnh có thể giúp ta giải quyết Conflict như : <code>git mergetool</code>... <br>
+                                                    Trước đó ta hãy cài đặt P4Merge và cấu hình nó như ở phần <code>git difftool</code>
+                                            </td>
+                                            <td>...</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>2</td>
+                                            <td><strong>git rebase --continue</strong></td>
+                                            <td>Sau khi sửa file ở bước 1 xong, ta đưa file lên vùng Staging bằng câu lệnh <code>git add *</code><br>
+                                                    Sử dụng <code>git rebase --continue</code> để hoàn tất việc rebase.
+                                            </td>
+                                            <td>...</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>3</td>
+                                            <td><strong>git rebase --abort</strong></td>
+                                            <td>Ngoài ra, ta cũng có thể sử dụng <code>git rebase --abort</code> để quay lại lúc trước khi rebase.</td>
+                                            <td>...</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>4</td>
+                                            <td><strong>git rebase --skip</strong></td>
+                                            <td>Sử dụng <code>git rebase --skip</code> để  giải quyết xung đột bằng cách mặc định lấy nội dung của nhánh <code>master</code> ( không khuyến khích sử dụng ).<br>
+                                            Nếu sử dụng <code>git rebase --skip</code> mà muốn quay lại lúc trước khi <code>rebase</code>, ta dùng <code>git reflog</code> để hiển thị lịch sử hoạt động và dùng <code>git reset --hard HEAD@{num}</code> để lại quay lại trước đó.<br>
+                                            </td>
+                                            <td>...</td>
+                                        </tr>
+                                    <!-- CONFLICT REBASE : END -->
                                     <!-- CẤU HÌNH P4MERGE : START -->
                                     <tr>
                                         <td colspan="4" class="subtopic">CẤU HÌNH P4MERGE (C:\Users\HaiLan\.gitconfig)</td>
