@@ -1,0 +1,32 @@
+làm tròn số, cần cài đặt thư viện <code>iomanip</code> và dùng hàm setprecision(3)<br>
+Dùng hàm lượng giác, cần cài thư viện <code>math.h</code><br>
+Khai báo 1 biến bằng cách khác :  #define N 10;<br>
+<hr/>
+Để nhận 1 số ngẫu nhiên : cần dùng 2 thư viện: <br/>
+ #include stdlib.h, #include time.h, 	srand(time(NULL), int m = rand()%RAMDOM_MAX; <a href="https://nguyenvanhieu.vn/sinh-so-ngau-nhien-trong-c-cpp/">Xem thêm</a><br/>
+ <hr>
+ Mảng 2 chiều (nằm trong mảng nhiều chiều được C++ hổ trợ).<br>
+ type array_name[row][column]; ( Giống như ma trận)<br>
+ <hr>
+ Truyền tham trị và Truyền tham biến : http://prntscr.com/mnjht5 , http://prntscr.com/mnjk00<br>
+
+ <hr>
+ Cấu trúc chuỗi.<br>
+ Dùng mảng 1 chiều : Char str[30] hoặc con trỏ cấp 1 :  Char *str = new int[30] để khái báo.<br>
+ Dùng hàm <code>gets(str)</code> để người dùng nhập chuỗi.<br>
+ Dùng hàm <code>puts(str)</code> hoặc cout để xuất chuỗi.<br>
+ Để tính kích thước của chuỗi, dùng <code>strlen(str)</code> nằm trong thư viện string.h <br>
+ Dùng 2 hàm<code> strcpy(str2,str1)</code> và <code>strncpy(str2,str1,5)</code> để sao chép str1 cho str2. <br>
+ Dùng 2 hàm<code> strcat(str2,str1)</code> và <code>strncat(str2,str1,5)</code> để nối chuỗi str1 cho str2. <br>
+ Dùng 2 hàm<code> strchr(str1,'k')</code> và <code>strstr(str1,'song')</code> để tìm ký tự hoặc chuỗi có trong str1 hay ko. <br>
+ Dùng 2 hàm<code> strcmp(str1,str2)</code> và <code>strcmp(str1,str2,3)</code> để so sánh str1 với str2. <br>
+ Dùng 2 hàm<code> toupper(int ch)</code> và <code>tolower(int ch)</code> để viết hoa và viết thường ký tự. Dùng <code>putchar(...)</code> để xuất ký tự. <br>
+
+ <hr>
+ Cách lưu 1 cấu trúc ( Struct) xuống tập tin. <br>
+ Dùng thư viên fstream.h
+ <pre>
+    ofstream outfile("dulieu.txt",ofstream::binary);
+    outfile.write((char *)dsSV, sizeof(dsSV));
+    outfile.close() ;
+ </pre>

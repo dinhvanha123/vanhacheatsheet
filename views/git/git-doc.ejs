@@ -260,8 +260,8 @@ td.subtopic {
                                     <tr>
                                         <td>14</td>
                                         <td><strong>git reflog</strong> </td>
-                                        <td>Là 1 tập tin hiển thị tất cả các <code>Commit</code> cũng như Lịch sử hoạt động trong Repo của chúng ta. Vd: mỗi lần ta <code>checkout</code> qua nhánh khác, ta <code>Commit</code>, ta <code>Rebase</code> sẽ đều được ghi lại bởi reflog.</br>
-                                                Chính vì vậy, git reflog thường sẽ là bước cuối cùng để khắc phục lỗi như là <code>Commit</code> nhầm, Xóa nhầm <code>Branch</code>, <code>Commit</code> nhầm nhánh. </br>
+                                        <td>Là 1 tập tin hiển thị tất cả các <code>Commit</code> cũng như Lịch sử hoạt động trong Repo của chúng ta. Vd: mỗi lần ta <code>checkout</code> qua nhánh khác, ta <code>Commit</code>, ta <code>Rebase</code> sẽ đều được ghi lại bởi <code>git reflog</code>.</br>
+                                                Chính vì vậy, <code>git reflog</code> thường sẽ là bước cuối cùng để khắc phục lỗi như là <code>Commit</code> nhầm, Xóa nhầm <code>Branch</code>, <code>Commit</code> nhầm nhánh. </br>
                                                 Lúc này ta sẽ dựa vào ID của mỗi <code>Commit</code> mà khôi phục lại <code>File</code>, <code>Branch</code>...
                                         </td>
                                         <td>...</td>
@@ -655,8 +655,18 @@ td.subtopic {
                                     </tr>
                                     <tr>
                                         <td>29</td>
-                                        <td>git rebase <strong>branch_name</strong></td>
+                                        <td> <strong>git rebase branch_name</strong></td>
                                         <td>Chạy lại lịch sử commit của branch_name trên nhánh hiện tại</td>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29.1</td>
+                                        <td><strong>git rebase --i commitID</strong></td>
+                                        <td>Chỉnh sửa nội dung commit của <code>commitID</code>. ( Có thể xóa luôn <code>commitID</code> )<br>
+                                            Khi push lên <code>Remote</code> cần thêm option <code>-f</code><br>
+                                            <code>git push origin master -f</code><br>
+                                                Note: cấu hình Editor là Notepad++ để dễ xử lý.<br>
+                                        </td>
                                         <td>...</td>
                                     </tr>
     

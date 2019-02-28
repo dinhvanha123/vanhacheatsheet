@@ -1,0 +1,43 @@
+Cài đặt 2 plugin 
+<code>npm install --save-dev webdriverio</code>
+<code>npm install --save-dev wdio-mocha-framework</code>
+(là Adapter của mocha Framework : 1 framework của Javascript)
+<code>npm install --save-dev wdio-selenium-standalone-service</code>
+<hr/>
+<h1>Công cụ để lấy vị trí WebElement</h1>
+Sử dụng công cụ Dev Chrome.<br/>
+Inspect Element => Copy => Copy Css Selector ( Google search : Css Selector)<br/>
+<hr/>
+Mocha là gì ? 
+http://prntscr.com/mmiz9d <br/>
+<hr/>
+Cách tổ chức Test Script với Mocha Framework<br/>
+Test suite với nhiều test case bên trong nó. Khởi tạo bằng từ khóa : <code>describe</code>
+http://prntscr.com/mmj051
+<hr/>
+File cấu hình việc thực thi test. <br/>
+http://prntscr.com/mmjcth <br/>
+https://webdriver.io/docs/options.html </br>
+Gõ touch test.conf.js để tạo file
+
+<pre>
+    exports.config = {
+        specs : [],
+        host : 'localhost',
+        port : 9515,
+        capabilities : [
+            {
+                browserName : 'chrome'
+            }
+        ],
+        framework : 'mocha',
+        mochaOpts : {
+            ui : 'bdd',
+            timeout : 600000
+        },
+        logLevel : 'verbose'
+    }
+</pre>
+<hr/>
+Cài đặt npm khi viết code với webdriverio. <br/>
+http://prntscr.com/mmjoxn </br>

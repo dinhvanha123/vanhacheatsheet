@@ -13,7 +13,19 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var gitRouter = require('./routes/git');
 var bootstrapRouter = require('./routes/bootstrap');
+// var request = require('request');
+// var jsdom = require('jsdom');
 
+// var req_url = 'http://www.localweather.com/weather/?pands=10001';
+
+// request({uri: req_url}, function(error, response, body){
+// 	if(!error && response.statusCode == 200){
+// 		var window = jsdom.jsdom(body).createWindow();
+		
+// 		var temp = window.document.getElementsByClassName('u-eng')[0].innerHTML;
+// 		console.log(temp);
+// 	}
+// });
 var app = express();
 // Kết nối MongoDB
 mongoose.connect("mongodb://dinhvanha123:dinhvanha123@ds163014.mlab.com:63014/passauthen",{ useNewUrlParser: true},function(){
