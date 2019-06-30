@@ -3,7 +3,45 @@ npm chalk : để in ra màn hình console màu sắc: Vd: in ra message màu gr
 npm yargs: thay vì dùng process.argv để hiển thị <a href="http://prntscr.com/mvvvld">Xem ảnh</a><br>
 Thêm tùy chọn cho yargs : <a href="http://prntscr.com/mvwob0">Xem ảnh</a><br>
 http://prntscr.com/mwd2nq <br>
+
 <hr>
 Chapter 5:
 Debugger: Thêm <code>debugger</code>, sau đó chạy dòng lệnh <code>node inspect app.js</code> để kiểm tra. Trên Chrome, vào <code>chrome://inspect</code> để truy vập <b>Debugger Tool</b><br>
 Cấu hình <a href="http://prntscr.com/mwuqpj">như hình</a> và nhấp vào <code>inspect</code> bên đưới Remote Target
+=======
+
+Call Stack, Event Loop, Callback Queue : <a href="http://prntscr.com/mx5bx1">Ảnh</a><br>
+Hàm setTimeout không thuộc về Javascript nên sẽ đưa vào NodeAPI ( thông qua luồng C++ ) để cho V8 xử lý. Sau đó đưa xuống CallBack Queue. Event Loop chỉ đưa Callback Queue vào Call Stack với điều kiện là Call Stack phải rỗng. Điều đó có nghĩa là Call Stack luôn thực hiện hàm Main trước ( hàm bao bọc toàn bộ code Nodejs của chúng ta. Do V8 làm) sau đó mới tới Callback Queue. Đó là lý do Nodejs được gọi là ngôn ngữ bất đồng bộ. Tại 1 thời điểm chỉ có 1 hàm được xử lý ở Call Stack. Đấy là lý do gọi Nodejs là ngôn ngữ đơn luồng, <br>
+<hr>
+Sử dụng npm request. Làm ứng dụng dự báo thời thiết. Đăng nhập:   <a href="https://darksky.net/dev/account">Link Dark Sky.net</a>  <a href="http://prntscr.com/mx81jl">Ảnh</a><br>
+Trong url của Dark sky cho phần vĩ độ  và kinh độ, cho nên, muốn lấy tọa độ bất chỗ nào truyền vào, ta cần biết tọa độ của nơi đó. Và dùng <a href="mapbox.com">mapbox.com</a> để làm lấy đc tọa độ. Link trực tiếp: <a href="https://docs.mapbox.com/api/search/#geocoding">Tại đây</a>
+
+<hr>
+Sử dụng npm hbs ( hbs viết tắt : handlebars) để tích hợp với express. Nó cũng là 1 view engine như EJS<br>
+Đăng ký method của hbs với node app :  <code>hbs.registerPartials('path_folder')</code> . Trong file .hbs cần dùng đến các .hbs pattern này thì <code>{{>name_file_hbs}}</code><br>
+<hr>
+
+Tạo file SSH dùng để đăng ký với Github và Heroku. Trước hết cần kiểm tra ta đã có SSH key pair chưa bằng câu lệnh <code>ls -a -l ~/.ssh</code>. <code>ls</code> có nghĩa là list out ( liệt kê) tất cả nội dung của file hoặc folder bên trong folder chỉ định. <code>-a</code> có nghĩa là tìm kiếm với cả những file hoặc folder ẩn, <code>-l</code> để format kết quả hiện thị cho dễ nhìn. Đối với ~/.ssh , dấu <b>~</b> tượng trưng cho folder <code>User</code> trong máy của chúng ta, vì thường SSH key pair sẽ được lưu vào trong đó. <code>/.ssh</code> là tìm kiếm file folder .ssh ( SSH key pair sẽ được lưu trong folder này, và folder này nằm trong folder User). Toàn bộ câu lệnh này có nghĩa là : Liệt kê tất cả các file trong Folder User (kể cả file và folder ẩn) và hiển thị  folder .ssh
+Nếu kết quả như <a href="http://prntscr.com/mza7lk">Hình này</a> thì có nghĩa là folder User chưa có SSH key pair.<br>
+ Sau đó ta dùng command  <code>ssh-keygen -t rsa -b 4096 -C "your_gmail"</code>. để tạo SSH key pair. <code>-t</code> viết tắt của Type, và ta chọn là mã hash rsa ( viết tắt của tên 3 người tạo ra giải thuật này), <code>-b</code> là viết tắt của bit, bạn muốn tạo bao nhiêu bit cho mã rsa này, và thông dụng nhất là 4096 bit. <code>-C</code> viết hoa chứ không viết thường ( Comment)  và thường là địa chỉ gmail của ta. Sau đó nhấn <code>Enter</code> <br>
+ Và lưu ý 1 điều là: các dòng kiểm tra hoặc tạo SSH KEY ở trên được viết trong Git Bash nếu là Window, còn với IOS và Linux có thể viết được ngay trong Visual Studio Code.<br>
+ Chương trình sẽ hỏi trong ta là tạo SSH Key trong Folder User phải không, và Passphare, ta cứ nhấn qua hết. 
+<a href="http://prntscr.com/mza9q2">Nhìn hình</a>, chương trình sẽ tạo ra SSH KEY trong folder User/ Van Ha, sau đó ta nhấn lại dòng lệnh <code>ls -a -l ~/.ssh</code> để kiểm tra đã có SSH Key chưa. Và <a href="http://prntscr.com/mzaa8q">như hình là thành công</a><br>
+
+Sau khi tạo SSH Key thành công, ta dùng lệnh <code>eval "$(ssh-agent -s)"</code> hoặc chỉ cần <code>eval</code> để khởi động SSH Agent lên. Và nếu nó đã chạy, nó sẽ thông báo cho ta biết bằng cách in ID ra, <a href="http://prntscr.com/mzaedc">Như hình</a>. <br>
+Sau đó ta dùng lệnh <code>ssh-add ~/.ssh/id_rsa
+</code> để đăng ký file ssh key private.<a href="http://prntscr.com/mzaehn">Như hình</div>. Đăng ký SSH Key Public với Git, ta gõ lệnh <code>cat ~/.ssh/id_rsa.pub</code>để đọc nội dung của file KEY public.  ( Gõ trong Git Bash), sau đó dán chúng vào trong Tài khoản Github trong phần Setting/SSH Key của chúng ta. (Title đặt sao cũng đc).
+Sau đó trong GitBash gõ dòng lệnh <code> ssh -T git@github.com
+</code>để kiểm tra, sau đó nhấn YES để hoàn thành. <a href="http://prntscr.com/mzamac">như hình</a>
+
+Để đăng ký SSH Key Public với Heroku, trước hết cần liên kết với heroku bằng cách đăng nhập. Trong Visual Studio Code, gõ lệnh <code>heroku -v</code> để xác nhận đã cài heroku chưa. Nếu chưa, search "Heroku CLI" để install. Sau đó gõ <code>heroku login</code>để liên kết.<br>
+Sau khi liên kết với heroku xong, gõ <code>heroku keys:add</code> để thêm SSH KEY plubic vào. 
+Để deploy app của ta, dùng câu lệnh <code>heroku create name_app_deploy</code><br>
+Heroku đã tạo cho chúng ta tên miền, vào doamin đó vẫn chưa hiện app của chúng ta. Đó là bởi vì chúng ta chưa deploy ( triển khai ) app vào trong heroku.<br>
+Tiếp theo, trong thư mục gốc (root) của app, vào file package.json, trong mã <code>script</code> ta gõ câu lệnh để chạy node app <code>"start" : "node src/app.js"</code>. Đây chính xác là lệnh mà Heroku sẽ chạy trên app của, vì thể điều này rất quan trọng. <a href="http://prntscr.com/mzbye6">Như hình</a> <br>
+
+Sau đó, trong file root app.js, ta cần sửa lại Port để phù hợp Heroku. Vì Heroku sẽ cung cấp cho App chúng ta Port ( có thể là 3000, hoặc 400 gì đó ...) nhưng giá trị Port này sẽ thay đổi liên tục. Heroku sẽ cung cấp cho app của chúng ta giá trị Port thông qua biến env ( environment). Vì thế chúng ta cần thiết lập lại giá trị Port trong app chúng ta để có thể luôn cập nhập giá trị Port của Heroku. <br>
+<code>const PORT = process.env.PORT || 3000</code>. Dòng lệnh này sẽ luôn cập nhập giá trị Port theo giá trị Port của Heroku, còn || là để chạy trong Local của ta. Ngoài ra, trong app còn có những Link gì thì cần xem xét coi có phù hợp không. Vd như: http://localhost:3000/weather?address=VietNam sẽ chạy trên local mà không chạy trên Heruko, ta cần sửa lại Link :  /weather?address=VietNam là được. <br>
+Sau đó <code>git push origin master</code>  , và quan trọng là <code>git push heroku master</code> để heroku deploy app của ta. Nếu có sự thay đổi về code, như cập nhập tính năng, sửa lỗi, thì làm tương tự.<br>
+
+
